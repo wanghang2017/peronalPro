@@ -1,0 +1,150 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html,
+body {
+    width : 100%;
+    height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border : none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    background     : url("/public/image/homebg.jpg") no-repeat;
+    background-size: cover;
+}
+
+/* 主页核心区域的样式 */
+
+
+.home-container {
+    width              : 700px;
+    background-color   : rgba(0, 0, 0, 0.3);
+    border-radius      : 10px;
+    color              : #fefefe;
+    overflow           : auto;
+    padding            : 20px;
+    margin-top         : -100px;
+    /* animation       : mymove 1s; */
+    /* transform       : all 1s; */
+}
+
+/* 头部 */
+
+.home-header {
+    height         : 65px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    border-bottom  : 1px solid #fefefe;
+    cursor         : pointer;
+}
+
+.home-header>p {
+    text-align : center;
+    color      : #fefefe;
+    text-shadow: 0 1px 1px #333;
+}
+
+
+/* 内容导航区 */
+.home-content {
+    border-bottom: 1px solid #fefefe;
+    overflow-x   : hidden;
+}
+
+.home-wrapper {
+    box-sizing: border-box;
+    padding   : 20px 10px 0 10px;
+    width     : 720px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.nav {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+
+}
+
+.item {
+    width        : 100%;
+    height       : 30px;
+    border-radius: 5px;
+    line-height  : 30px;
+    background   : rgba(0, 0, 0, 0.5);
+    text-align   : left;
+    color        : #fefefe;
+    margin-bottom: 20px;
+
+}
+
+.item a {
+    color       : #fefefe;
+    text-shadow : 0 1px 1px #333;
+    padding-left: 20px;
+}
+
+
+.item:hover {
+    background: #fff;
+}
+
+.item:hover a {
+    color: #222;
+}
+
+
+/* 底部导航区 */
+.home-footer {
+    display        : flex;
+    justify-content: flex-end;
+    padding-top    : 20px;
+}
+
+.home-footer a {
+    color: #fefefe;
+}
+
+.home-footer a:hover {
+    padding      : 0 10px;
+    border-radius: 3px;
+    background   : #fefefe;
+    color        : #222;
+}
+
+
+
+
+@keyframes mymove {
+    from {
+        transform: translateY(-100px);
+        opacity  : 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity  : 1;
+    }
+}

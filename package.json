@@ -1,0 +1,23 @@
+{
+  "name": "personalPro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "egg-bin dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg-mysql": "^3.0.0",
+    "egg-view-nunjucks": "^2.2.0"
+  },
+  "devDependencies": {
+    "egg": "^2.25.0",
+    "egg-bin": "^4.14.0"
+  }
+}

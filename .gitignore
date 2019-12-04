@@ -1,0 +1,7 @@
+node_modules
+run
+logs
+
+package-lock.json
+test
+
