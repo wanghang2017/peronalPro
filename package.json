@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "egg-bin dev"
+    "dev": "egg-bin dev",
+    "start":"egg-scripts start --port=8080 --daemon",
+    "stop":"egg-scripts stop"
   },
   "keywords": [],
   "author": "",
