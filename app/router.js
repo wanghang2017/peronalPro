@@ -6,4 +6,5 @@ module.exports = app => {
     router.get("/user/info", controller.user.info);
     router.get("/user", controller.user.index);
     router.get("/contact", controller.contact.index);
+    router.get("/community", controller.community.index);
 }

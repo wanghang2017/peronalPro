@@ -1,11 +1,15 @@
 module.exports = {
     keys: "123",
 
+    middleware:['robot'],
+    robot:{
+        ua:[/Baiduspider/i],
+    },
     mysql: {
         // 单数据库信息配置
         client: {
             host: "*.*.*.*",
-            port: "3306",
+            port: "*",
             user: "*",
             password: "*",
             database: "*",
