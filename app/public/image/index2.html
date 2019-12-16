@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            /* padding: 10px; */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .wrapper2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .wrapper2-container {
+            flex-basis: 20%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+
+        .img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 12px;
+        }
+
+        .date {
+            font-size: 9px;
+            margin-bottom: 5px;
+        }
+
+        .btn-container2 {
+            display: flex;
+
+        }
+
+        .click-changebg {
+            margin-right: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background: #3385ff;
+            color: #fff;
+            width: 100px;
+            height: 34px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .choose-gift {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-wrapper {
+            width: 80%;
+            /* height: 300px; */
+            background: #fff;
+        }
+
+        .gift-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 250px;
+            overflow: scroll;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 0;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            pointer-events: auto;
+        }
+
+        .gift-item {
+            width: 20%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-title {
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <ul class="wrapper">
+            <li class="wrapper-container">
+                <ul class="wrapper2">
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="wrapper-container">
+                <ul class="wrapper2">
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="wrapper-container">
+                <ul class="wrapper2">
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="wrapper-container">
+                <ul class="wrapper2">
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                    <li class="wrapper2-container">
+                        <img class="img" src="./xie.jpg" />
+                        <span class="date">2019/12/16</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-container">
+        <button class="click-random">随机生成</button>
+
+    </div>
+
+    <div class="btn-container">
+        <button class="click-random click-changebg">更换背景</button>
+        <button class="click-random click-changeHeart">更换心</button>
+
+    </div>
+
+    <div class="choose-gift">
+        <div class="modal-wrapper">
+            <div class="modal-title">请选择用于替换得礼物</div>
+            <ul class="gift-container">
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+                <li class="gift-item">
+                    <img class="img" src="./xie.jpg">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+
+        var operateCur = "";
+        var OuterImgList = [];
+        var type = "one" //default : 更换一个   /bg: 更换bg /heart: 更换心
+
+        var ul = document.getElementsByClassName("wrapper")[0]
+        var origin = ["./520kouhong.jpg", "./520meigui.jpg", "./666.jpg", "./3344.jpg",
+            "./aideliwu.jpg", "./aidelvxing.jpg", "./baoshijie.jpg", "./dacall.jpg",
+            "./falali.jpg", "./feiji.jpg", "./gaobaiwen.jpg", "./huanggua.jpg",
+            "./maikefeng.jpg", "./meiguihua.jpg", "./tangguo.jpg", "./xianglian.jpg",
+            "./xie.jpg", "./xuyuanqiu.jpg", "./yingguangbang.jpg", "./youting.jpg"];
+
+        var ary = [
+            [1, 1, 1, 1, 1],
+            [1, 2, 1, 2, 1],
+            [2, 1, 2, 1, 2],
+            [1, 2, 1, 2, 1],
+            [1, 1, 2, 1, 1],
+            [1, 1, 1, 1, 1]
+
+        ]
+
+        var container = document.getElementsByClassName("container")[0];
+        var clickRandom = document.getElementsByClassName("click-random")[0];
+        var wrapper2Container = document.getElementsByClassName("wrapper2-container");
+
+        function random() {
+            return Math.ceil(Math.random() * 19)
+        }
+
+        var randomList = [];
+        function getRandom() {
+            var randomNum = []
+            while (randomNum.length <= 2) {
+                var num = random();
+                if (randomNum.indexOf(num) == -1) {
+                    randomNum.push(num);
+                }
+            }
+            return randomNum;
+        }
+
+        function chooseImgList() {
+            var randomAry = getRandom();
+            // console.log(randomAry);
+            var first = origin[randomAry[0]], second = origin[randomAry[1]];
+            // console.log(first, second)
+            var imgList = [];
+
+
+            return ary.map(item => item.map(cur => {
+                if (cur == 1) return { id: cur, img: first }
+                if (cur == 2) return { id: cur, img: second }
+            }))
+        }
+
+        function getStr(imgList) {
+            OuterImgList = imgList
+            var str = "<ul class='wrapper'>";
+            imgList.map(
+                (item, index1) => {
+                    str += " <li class='wrapper-container'><ul class='wrapper2'>";
+                    item.map(
+                        (cur, index2) => {
+                            str += '<li data-cur="' + index1 + "," + index2 + '" class="wrapper2-container"><img class="img" src="' + cur.img + '" /><span class="date">2019/12/16</span></li>';
+                        }
+                    )
+                    str += "</ul></li>"
+                }
+            )
+            str += "</ul>";
+            return str;
+        }
+
+
+        function handleClick() {
+            var str = getStr(chooseImgList());
+            container.innerHTML = str;
+            bindEvent();
+        }
+
+        handleClick();
+
+        clickRandom.onclick = handleClick;
+
+
+        function bindEvent() {
+            for (var i = 0; i < wrapper2Container.length; i++) {
+                var cur = wrapper2Container[i];
+                cur.onclick = function (e) {
+                    type = "one";
+                    operateCur = this.dataset.cur;
+                    chooseGift.style.display = "flex";
+                }
+            }
+
+        }
+
+        bindEvent();
+
+        function woca() {
+            var str = "";
+            origin.map(item => {
+                str += '<li class="gift-item"  data-img=' + item + '><img class="img" src="' + item + '"></li>';
+            })
+            return str
+        }
+
+        var chooseGift = document.getElementsByClassName("choose-gift")[0];
+
+        var giftContainer = document.getElementsByClassName("gift-container")[0];
+        giftContainer.innerHTML = woca();
+
+        var giftItem = document.getElementsByClassName("gift-item");
+
+        for (var i = 0; i < giftItem.length; i++) {
+            var cur = giftItem[i];
+            cur.onclick = function (e) {
+                e.stopPropagation()
+                var chooseUrl = this.dataset.img;
+                chooseGift.style.display = "none";
+                switch (type) {
+                    case "one":
+                        var operateAry = operateCur.split(",");
+                        OuterImgList[operateAry[0]][operateAry[1]].img = chooseUrl
+                        break;
+                    case "bg":
+                        OuterImgList.map(item => {
+                            return item.map(cur => {
+                                if (cur.id === 1) {
+                                    cur.img = chooseUrl
+                                }
+                                return cur;
+                            })
+                        })
+                        break;
+                    case "heart":
+                        OuterImgList.map(item => {
+                            return item.map(cur => {
+                                if (cur.id === 2) {
+                                    cur.img = chooseUrl
+                                }
+                                return cur;
+                            })
+                        })
+                        break;
+                }
+
+                var str = getStr(OuterImgList);
+                container.innerHTML = str;
+                bindEvent();
+            }
+        }
+
+        chooseGift.onclick = function (e) {
+            chooseGift.style.display = "none";
+        }
+
+
+        var clickChangebg = document.getElementsByClassName("click-changebg")[0];
+        var clickChangeHeart = document.getElementsByClassName("click-changeHeart")[0];
+
+        // function changeBg() {
+
+        // }
+
+        clickChangebg.onclick = function (e) {
+            type = "bg";
+            chooseGift.style.display = "flex";
+
+        }
+        clickChangeHeart.onclick = function (e) {
+            type = "heart";
+            chooseGift.style.display = "flex";
+
+        }
+
+        // function changeHeart() {
+
+        // }
+
+
+    </script>
+</body>
+
+</html>
